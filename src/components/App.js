@@ -36,6 +36,7 @@ class App extends Component {
             <AppContext.Provider
                 value={{
                     toggleFeatured: this.toggleFeatured,
+                    toggleDescription: this.toggleDescription
                 }}
             >
                 <div className='ui container mt-3'>

@@ -1,0 +1,44 @@
+.front, .back {
+    transition: transform 400ms ease-in;
+    backface-visibility: hidden;
+}
+
+.front {
+    transform: perspective(500px) rotateY(0deg);
+}
+
+.front.active {
+    transform: perspective(500px) rotateY(180deg);
+}
+
+.front img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: inherit;
+}
+
+.back {
+    padding: 15px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    backface-visibility: hidden;
+    position: absolute;
+    transform: perspective(500px) rotateY(-180deg);
+}
+
+.back.active {
+    transform: perspective(500px) rotateY(0deg);
+}
+
+.icon {
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 150ms ease-in;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}
